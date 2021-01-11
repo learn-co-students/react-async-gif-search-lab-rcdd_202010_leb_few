@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NavBar(props){
+ export default function NavBar(props){
   const colors = {
     black: 'navbar-inverse',
     white: 'navbar-default'
@@ -19,4 +19,3 @@ function NavBar(props){
   )
 }
 
-export default NavBar
