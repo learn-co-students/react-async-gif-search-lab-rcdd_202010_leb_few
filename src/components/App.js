@@ -1,13 +1,23 @@
 import React from 'react'
-
+import { useState } from "react";
 import NavBar from './NavBar'
+import GifSearch from "./GifSearch.js";
+import GifListContainer from './../containers/GifListContainer' ;
 
-// the App component should render out the GifListContainer component 
 
 const App = () => {
+const [query, setQuery] = useState("");
+
+  const handleQuery = (q) => {
+    setQuery(q);
+    //console.log(query);
+  };
+
   return (
     <div>
         < NavBar color='black' title="Giphy Search" />
+      <GifSearch handleQuery={handleQuery} />
+      <GifListContainer giphyName={query} />
     </div>
   )
 }
